@@ -1,50 +1,70 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>信息搜集</title>
+    <title>常用网站汇总</title>
     <style>
-        a:hover
+        *
         {
-            color:rgb(0, 255, 0);
+            padding:0px;
+            border:0px;
+            box-sizing:border-box;
         }
         body 
         {
-            background-color: #f1f1f4;
+            background-color: #f3f4f6;
         }
-        h1
+        div.homepage
         {
-            line-height: 10px;
-        }
-        div
-        {
-            width: 400px;
-            height: 260px;
+            width: 760px;
+            padding:24px;
+            margin:12px auto;
             background-color: #fff;
-            padding: 20px;
-            margin: 50px auto;
             border-radius:5px;
-            box-sizing:border-box;
+        }
+        .homepage h1
+        {
+            font-size:28px;
+            font-weight:400;
+        }
+        .homepage li
+        {
+            margin:16px;
+            list-style:none;
+        }
+        .homepage div::before
+        {
+            content:'●';
+            font-size:16px;
+            font-weight:400;
+        }
+        .homepage a
+        {
+            font-size:16px;
+            font-weight:400;
+            text-decoration:none;
+        }
+        .homepage a:hover
+        {
+            color:red;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <h1>信息收集</h1>
-        <br>
-        <form>
-            账号：<input type="text" placeholder="请输入银行卡号">
-            <br><br>
-            密码：<input type="password" placeholder="请输入银行密码">
-            <br><br>
-            <button type="submit">提交</button>
-            <button type="reset">重置</button>
-        </form>
-        <a href="./测试 - 副本.html">跳转</a>
+    <div class="homepage">
+        <h1>常用网站汇总</h1>
+        <ul>
+            <!-- <li><div><a href="#" target="_blank"></a></div></li> -->
+            <li><div><a href="http://172.13.1.32/login!welcome.action" target="_blank">东软教学管理系统</a></div></li>
+            <li><div><a href="http://study.neuedu.com/loginF" target="_blank">东软智慧教育平台</a></div></li>
+            <li><div><a href="https://www.csdn.net/" target="_blank">CSDN</a></div></li>
+            <li><div><a href="https://chat18.aichatos8.xyz/" target="_blank">免费ChatGPT3.5模型</a></div></li>
+            <li><div><a href="https://github.com/" target="_blank">Github</a></div></li>
+        </ul>
     </div>
 </body>
 
