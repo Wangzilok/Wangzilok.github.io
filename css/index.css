@@ -36,8 +36,10 @@ div.homepage
     font-size:16px;
     font-weight:400;
     text-decoration:none;
+    transition:all 0.5s;
 }
 .homepage a:hover
 {
     color:red;
+    font-size:24px;
 }
