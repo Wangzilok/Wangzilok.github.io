@@ -26,7 +26,7 @@ div.homepage
     font-weight:700;
     text-align:center;
 }
-.homepage li
+.homepage dd
 {
     margin:16px;
     list-style:none;
