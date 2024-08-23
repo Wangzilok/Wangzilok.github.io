@@ -6,6 +6,7 @@ body
     background-size:cover;
     background-attachment:fixed;
 }
+
 div.homepage
 {
     width: 760px;
@@ -20,19 +21,19 @@ div.homepage
     font-weight:700;
     text-align:center;
 }
-.homepage dd
+.homepage ul li
 {
     margin:16px;
     list-style:none;
 }
-.homepage a
+.homepage ul li a
 {
     font-size:16px;
     font-weight:400;
     text-decoration:none;
     transition:all 0.5s;
 }
-.homepage a:hover
+.homepage ul li a:hover
 {
     color:red;
     font-size:24px;
