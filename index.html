@@ -1,46 +1,122 @@
-﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header>
+      <h1>数据可视化-ECharts</h1>
+      <div class="show-time"></div>
+      <script>
+        var t = null;
+        t = setTimeout(time, 1000); //开始运行
+        function time() {
+          clearTimeout(t); //清除定时器
+          dt = new Date();
+          var y = dt.getFullYear();
+          var mt = dt.getMonth() + 1;
+          var day = dt.getDate();
+          var h = dt.getHours(); //获取时
+          var m = dt.getMinutes(); //获取分
+          var s = dt.getSeconds(); //获取秒
+          document.querySelector(".show-time").innerHTML =
+            "当前时间：" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "日-" +
+            h +
+            "时" +
+            m +
+            "分" +
+            s +
+            "秒";
+          t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+      </script>
+    </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>常用网站汇总</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/index.css">
-</head>
+    <!-- 页面主体 -->
+    <section class="mainbox">
+      <!-- 左侧盒子 -->
+      <div class="column">
+        <div class="panel bar">
+          <h2>柱形图-就业行业</h2>
+          <!-- 图表放置盒子 -->
+          <div class="chart"></div>
+          <!-- 伪元素绘制盒子下边角 -->
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+          <h2>折线图-人员变化
+            <a class="a-active" href="javascript:;">2020</a>
+            <a href="javascript:;">2021</a>
+          </h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie">
+          <h2>饼形图-年龄分布</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+      <!-- 中间盒子 -->
+      <div class="column">
+        <!-- 头部 no模块 -->
+        <div class="no">
+          <div class="no-hd">
+            <ul>
+              <li>12434</li>
+              <li>10983</li>
+            </ul>
+          </div>
+          <div class="no-bd">
+            <ul>
+              <li>前端需求人数</li>
+              <li>市场供应人数</li>
+            </ul>
+          </div>
+        </div>
+        <!-- map模块 -->
+        <div class="map">
+          <div class="map1"></div>
+          <div class="map2"></div>
+          <div class="map3"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <!-- 右侧盒子 -->
+      <div class="column">
+        <div class="panel bar2">
+          <h2>柱形图-就业行业</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2">
+          <h2>折线图-播放量</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie2">
+          <h2>饼形图-地区分布</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    </section>
 
-<body>
-    <div class="homepage">
-        <h1>常用网站汇总</h1>
-        <ul>
-            <!-- <dd>●<a href="#" target="_blank"></a></dd> -->
-            <!-- <dd>●<a href="http://172.13.1.32/login!welcome.action" target="_blank">东软教学管理系统</a></dd> -->
-            <!-- <dd>●<a href="http://study.neuedu.com/loginF" target="_blank">东软智慧教育平台</a></dd> -->
-            <li>●<a href="https://www.csdn.net/" target="_blank">CSDN</a></li>
-            <li>●<a href="https://pintia.cn/" target="_blank">PTA平台</a></li>
-            <li>●<a href="https://chat18.aichatos.xyz/#/chat/1715828973604" target="_blank">免费ChatGPT3.5模型</a></li>
-            <li>●<a href="https://github.com/" target="_blank">Github</a></li>
-            <li>●<a href="https://freesound.org/search/?s=Date+added+(newest+first)&g=1" target="_blank">Freesound（免费音效网站）</a></li>
-            <li>●<a href="https://carbon.now.sh" target="_blank">碳（生成精美源代码图像）</a></li>
-            <li>●<a href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN（Web技术与参考指南汇总）</a></li>
-            <li>●<a href="https://developer.unity.cn/" target="_blank">Unity官方开发者社区</a></li>
-            <li>●<a href="https://soutushenqi.com/toolsView/?uniqueKey=searchPixivImage" target="_blank">pixiv id搜图器（无需翻墙）</a></li>
-            <li>●<a href="http://waifu2x.udp.jp/" target="_blank">Waifu2x（图片无损放大）</a></li>
-            <li>●<a href="https://mzh.moegirl.org.cn/Mainpage#/desktop/index" target="_blank">萌娘百科</a></li>
-            <li>●<a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a></li>
-            <li>●<a href="https://zh.z-library.se/?ts=1810" target="_blank">Z-Library（电子图书馆，需翻墙）</a></li>
-            <li>●<a href="https://www.iconfont.cn/" target="_blank">iconfont（矢量图标库）</a></li>
-            <li>●<a href="https://www.bootcss.com/" target="_blank">Bootstrap中文网（Web开发框架）</a></li>
-            <li>●<a href="https://tophix.com/zh-cn/gif-maker/video-to-gif#google_vignette" target="_blank">TOPHIX（视频转gif）</a></li>
-            <li>●<a href="https://www.humblebundle.com/games" target="_blank">Humble（游戏慈善包购买）</a></li>
-            <li>●<a href="https://polyhaven.com/" target="_blank">Poly Haven（免费3D贴图下载网站）</a></li>
-            <li>●<a href="https://itch.io/game-assets/free" target="_blank">itch.io （免费2D游戏素材下载网站）</a></li>
-            <li>●<a href="https://opengameart.org/" target="_blank">Opengameart（免费2D游戏素材下载网站）</a></li>
-        </ul>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
-</body>
-
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <!-- 引入china.js 完成地图模块 -->
+    <script src="js/china.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>
